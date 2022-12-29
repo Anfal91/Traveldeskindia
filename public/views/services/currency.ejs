@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="../../css/currency.css">
+<!-- Header Start -->
+<div class="container-fluid forex-page-header">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-4 text-white text-uppercase">Forex Service</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="/service">Services</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Forex Service</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- Registration Start -->
+<div class="container-fluid py-5" style="margin: 90px 0;">
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div style="padding:0px 25px;" class="col-lg-7 mb-5 mb-lg-0">
+
+            <div class="curr-container">
+                <h1>Currency Convertor</h1>
+                <div class="box">
+                    <div class="left_box">
+                        <select name="currency" class="currency"></select>
+                        <input type="number" name="" id="num">
+                    </div>
+                    <div class="right_box">
+                        <select name="currency" class="currency"></select>
+                        <input type="text" name="" id="ans" disabled>
+                    </div>
+                </div>
+                <button class="btn" id="btn">Convert</button>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="card border-0">
+                <div class="card-header bg-primary text-center p-4">
+                    <h3 class="text-white m-0">Enquiry for buy & sell</h3>
+                </div>
+                <div class="card-body rounded-bottom bg-white p-5">
+                    
+                    <form>
+
+                        <div class="form-group">
+                            <input pattern="^[a-zA-Z_ ]*$" title="Here you can use only alphabets" id="name" name="Name" type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" name="Email" type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input pattern="\d{10}" title="number must be 10 digit" id="number" name="Number" type="text" class="form-control p-4" placeholder="Your contact" required="required" />
+                        </div>
+                        <button onclick="mail()" type="submit" class="submitButton btn btn-primary btn-block py-3">
+                            <span class="text-me" data-cta="Join today">Submit</span>
+                          </button>
+                   </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Registration End -->
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="../../js/currency.js"></script>
+
+<script>
+    function mail(){
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let number = document.getElementById("number").value;;
+
+
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "trymail237@gmail.com",
+        Password : "D7672DD98FA66286A8E8D62C860BACE86BA3",
+        To : 'support@traveldeskindia.com',
+        From : "trymail237@gmail.com",
+        Subject: name+" want forex service",
+        Body: "Forex Service Mail<br>"+"<br>Name: "+name+"<br>Contact no: "+number+"<br>Email id: "+email
+        });
+        alert('your message has been sent successfully')
+    }
+
+</script>

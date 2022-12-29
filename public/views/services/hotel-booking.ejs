@@ -1,0 +1,175 @@
+ <!-- Header Start -->
+ <div class="container-fluid hotel-booking-page-header">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-4 text-white text-uppercase">Hotel Booking</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="/service">Services</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Hotel Booking</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<!-- Booking Start -->
+<div class="container-fluid booking mt-5 pb-5">
+    <div class="container pb-5">
+        <div class="booking-container bg-light shadow" style="padding: 30px;">
+            <form>
+            <div class="row align-items-center" style="min-height: 60px;">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <input id="hotel" type="text" name="hotel" class="form-control p-4" placeholder="Hotel Name" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <input id="place" type="text" name="place" class="form-control p-4" placeholder="city, state" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date1" data-target-input="nearest">
+                                <input pattern="\d{1,2}/\d{1,2}/\d{4}" id="fromDate" type="text" name="from" class="form-control p-4 datetimepicker-input" placeholder="Check-in Date" data-target="#date1" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input pattern="\d{1,2}/\d{1,2}/\d{4}" title="Here you can type only date" id="toDate" type="text" name="to" class="form-control p-4 datetimepicker-input" placeholder="Check-out Date" data-target="#date2" data-toggle="datetimepicker"/>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input id="rooms" type="number" name="rooms" class="form-control p-4" placeholder="No. of Rooms" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input id="adult" type="number" name="adult" class="form-control p-4" placeholder="No. of Adult" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input id="child" type="number" name="child" class="form-control p-4" placeholder="No. of Child" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <select id="category" name="category" class="custom-select px-4" style="height: 47px;">
+                                    <option selected>Category</option>
+                                    <option value="1 star">1 star</option>
+                                    <option value="2 star">2 star</option>
+                                    <option value="3 star">3 star</option>
+                                    <option value="4 star">4 star</option>
+                                    <option value="5 star">5 star</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input pattern="^[a-zA-Z_ ]*$" title="Here you can use only alphabets" id="name" name="name" type="text" class="form-control p-4" placeholder="Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input pattern="\d{10}" title="number must be 10 digit" id="number" name="number" type="text" class="form-control p-4" placeholder="Contact No" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3 mb-md-0">
+                                <div class="date" id="date2" data-target-input="nearest">
+                                    <input type="text" name="remark" id="msg" class="form-control p-4" placeholder="Remarks"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button onclick="mail()" class="btn btn-primary btn-block" style="height: 47px; margin-top: -2px;">Submit</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Booking End -->
+
+
+
+<!-- content Start -->
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="position-relative h-100">
+                    <img class="w-100" src="https://drive.google.com/uc?export=download&id=1es9SIkAl7cJbQ4RS6Z7XlW46tmYXaUpf">
+                </div>
+            </div>
+            <div class="col-lg-6 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5">
+                    <h1 class="mb-3">HOTEL BOOKINGS</h1>
+                    <p>Luxury Hotels or Budget Hotels for leisure, business, weddings & many more.</p>
+
+                    <h1 class="mb-3">
+                        HOME AWAY FROM HOME
+                    </h1>
+                    <p>TTo get the most out of your Stay, it is important to understand choices and how they work, We can help.</p>
+                    <a href="/contact" class="btn btn-primary mt-1">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    function mail(){
+            let name = document.getElementById("name").value;
+            let hotel = document.getElementById("hotel").value;
+            let number = document.getElementById("number").value;
+            let place = document.getElementById("place").value;
+            let fromDate = document.getElementById("fromDate").value;
+            let toDate = document.getElementById("toDate").value;
+            let rooms = document.getElementById("rooms").value;
+            let adult = document.getElementById("adult").value;
+            let child = document.getElementById("child").value;
+            let category = document.getElementById("category").value;
+            let msg = document.getElementById("msg").value;
+
+
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "trymail237@gmail.com",
+        Password : "D7672DD98FA66286A8E8D62C860BACE86BA3",
+        To : 'support@traveldeskindia.com',
+        From : "trymail237@gmail.com",
+        Subject: name+" Booked Hotel",
+        Body: "Hotel Booking Mail<br>"+"Hotel Name: "+hotel+"<br>"+"Place: "+place +"<br>"+"<br>check-in date: "+fromDate+"<br>Check-out date: "+toDate+"<br>No. of Rooms: "+rooms+"<br>No. of adult: "+adult+"<br>No. of child: "+child+"<br>Category: "+category+"<br>Name: "+name+"<br>Contact no: "+number+"<br>Client requirement: "+msg
+        });
+        alert('your message has been sent successfully')
+    }
+
+</script>

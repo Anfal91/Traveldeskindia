@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .curr-container{
+    background-color: white;
+    padding: 10px 24px;
+    border-radius: 20px;
+    /* width: 490px; */
+    margin: auto;
+  
+  }
+  
+  .curr-container h1{
+    color: #364547;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  
+  .curr-container .box{
+    width: 100%;
+    display: flex;
+  }
+  
+  .curr-container .box div{
+    width: 100%;
+  }
+  
+  .curr-container select{
+    width: 95%;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #D34619;
+    outline: none;
+    color: black;
+    margin: 0.2em 0;
+    padding: 0 1em;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  
+  .curr-container input{
+    width: 95%;
+    height: 40px;
+    font-size: 1em;
+    margin: 0.2em 0;
+    border-radius: 10px;
+    border: none;
+    background: #cccccc;
+    outline: none;
+    padding: 0 1em;
+  }
+  
+  
+  .curr-container .btn{
+    width: 98%;
+    height: 40px;
+    background: #364547;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
