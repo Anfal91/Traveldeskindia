@@ -1,3 +1,4 @@
+<%- include('../components/navbar.ejs') -%>
 <link rel="stylesheet" href="../../css/currency.css">
 <!-- Header Start -->
 <div class="container-fluid forex-page-header">
@@ -43,18 +44,18 @@
                 </div>
                 <div class="card-body rounded-bottom bg-white p-5">
                     
-                    <form>
+                    <form action="/buy_currency" method="post">
 
                         <div class="form-group">
-                            <input pattern="^[a-zA-Z_ ]*$" title="Here you can use only alphabets" id="name" name="Name" type="text" class="form-control p-4" placeholder="Your name" required="required" />
+                            <input pattern="^[a-zA-Z_ ]*$" title="Here you can use only alphabets" id="name" name="name" type="text" class="form-control p-4" placeholder="Your name" required="required" />
                         </div>
                         <div class="form-group">
-                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" name="Email" type="email" class="form-control p-4" placeholder="Your email" required="required" />
+                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" name="email" type="email" class="form-control p-4" placeholder="Your email" required="required" />
                         </div>
                         <div class="form-group">
-                            <input pattern="\d{10}" title="number must be 10 digit" id="number" name="Number" type="text" class="form-control p-4" placeholder="Your contact" required="required" />
+                            <input pattern="\d{10}" title="number must be 10 digit" id="number" name="number" type="text" class="form-control p-4" placeholder="Your contact" required="required" />
                         </div>
-                        <button onclick="mail()" type="submit" class="submitButton btn btn-primary btn-block py-3">
+                        <button type="submit" class="submitButton btn btn-primary btn-block py-3">
                             <span class="text-me" data-cta="Join today">Submit</span>
                           </button>
                    </form>
@@ -90,3 +91,4 @@
     }
 
 </script>
+<%- include('../components/footer.ejs') -%>

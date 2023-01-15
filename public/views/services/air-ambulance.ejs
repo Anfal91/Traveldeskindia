@@ -1,3 +1,4 @@
+<%- include('../components/navbar.ejs') -%>
 <!-- Header Start -->
 <div class="container-fluid air-ambulance-page-header">
     <div class="container">
@@ -18,7 +19,7 @@
 <div class="container-fluid booking mt-5 pb-5">
     <div class="container pb-5">
         <div class="booking-container bg-light shadow" style="padding: 30px;">
-    
+            <form action="/book_air-ambulance" method="post">
             <div class="row align-items-center" style="min-height: 60px;">
 
                 <div class="row align-items-center">
@@ -49,7 +50,7 @@
                         <div class="col-md-4">
                             <div class="mb-3 mb-md-0">
                                 <div class="date" id="date2" data-target-input="nearest">
-                                    <input type="text" name="remark" id="msg" class="form-control p-4" placeholder="Remarks"/>
+                                    <input type="text" name="msg" id="msg" class="form-control p-4" placeholder="Remarks"/>
                                 </div>
                             </div>
                         </div>
@@ -58,10 +59,11 @@
                     
                     
                     <div class="col-md-2">
-                        <button onclick="sendmail()" class="btn btn-primary btn-block" style="height: 47px; margin-top: -2px;">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block" style="height: 47px; margin-top: -2px;">Submit</button>
                     </div>
                 
             </div>
+        </form>
         </div>
     </div>
 </div>
@@ -175,3 +177,4 @@ Delhi | Mumbai | Hyderabad | Kolkata Guwahati |Patna |Raipur | Kerala | Chennai
     }
 
 </script>
+<%- include('../components/footer.ejs') -%>

@@ -139,7 +139,7 @@ a.logoOverlay {
 }
 @media screen and (max-width: 768px) {
   .service-box {
-    padding: 0 70px !important;
+    padding: 0 15px !important;
   }
 }
 .services-section a {
@@ -4586,7 +4586,7 @@ input[type="button"].btn-block {
 }
 @media only screen and (max-width: 769px) {
   .logo-img {
-    width: 30%;
+    width: 40%;
   }
 }
 .footer-logo-img {
@@ -6556,6 +6556,7 @@ a.close.disabled {
   .carousel-item {
     /* height:100% !important;
       width: 100% ; */
+      height: 420px !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -10466,6 +10467,8 @@ h6,
 .visa-package-item {
   transition: 0.5s;
   height: 425px;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
 }
 .visa-package-item:hover {
   box-shadow: 0 0 30px #cccccc;
