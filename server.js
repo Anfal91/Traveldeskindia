@@ -38,7 +38,7 @@ app.post("/book_flight", function (req, res) {
     });
     var mailOptions = {
       from: email,
-      to: "anfalvaktapurya91@gmail.com",
+      to: "support@traveldeskindia.com",
       subject: "Flight-Booking from website",
       text: `
       Name: ${name}
@@ -76,7 +76,7 @@ app.post("/book_air-ambulance", function (req, res) {
   });
   var mailOptions = {
     from: "traveldeskweb@gmail.com",
-    to: "anfalvaktapurya91@gmail.com",
+    to: "support@traveldeskindia.com",
     subject: "Air-ambulance-Booking from website",
     text: `
     Name: ${name}
@@ -114,7 +114,7 @@ app.post("/book_charter", function (req, res) {
   });
   var mailOptions = {
     from: "traveldeskweb@gmail.com",
-    to: "anfalvaktapurya91@gmail.com",
+    to: "support@traveldeskindia.com",
     subject: "Charter-Booking from website",
     text: `
     Name: ${name}
@@ -153,7 +153,7 @@ app.post("/buy_currency", function (req, res) {
   });
   var mailOptions = {
     from: "traveldeskweb@gmail.com",
-    to: "anfalvaktapurya91@gmail.com",
+    to: "support@traveldeskindia.com",
     subject: "Forex enquiry from website",
     text: `
     Name: ${name}
@@ -195,7 +195,7 @@ app.post("/book_hotel", function (req, res) {
   });
   var mailOptions = {
     from: "traveldeskweb@gmail.com",
-    to: "anfalvaktapurya91@gmail.com",
+    to: "support@traveldeskindia.com",
     subject: "Hotel-Booking from website",
     text: `
     Name: ${name}
@@ -237,7 +237,7 @@ app.post("/get_insurance", function (req, res) {
   });
   var mailOptions = {
     from: "traveldeskweb@gmail.com",
-    to: "anfalvaktapurya91@gmail.com",
+    to: "support@traveldeskindia.com",
     subject: "Travel insurance enquiry from website",
     text: `
     Name: ${name}
@@ -253,6 +253,44 @@ app.post("/get_insurance", function (req, res) {
     res.redirect("/thankyou");
   });
 });
+
+// Contact form
+app.post("/contact_mail", function (req, res) {
+
+  let name = req.body.name;
+  let email = req.body.email;
+  let subject = req.body.subject;
+  let massage = req.body.massage;
+
+
+
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "traveldeskweb@gmail.com",
+      pass: "pwgnjyvtnjuezxsi",
+    },
+  });
+  var mailOptions = {
+    from: "traveldeskweb@gmail.com",
+    to: "support@traveldeskindia.com",
+    subject: "Contact enquiry from website",
+    text: `
+    Name: ${name}
+    Subject: ${subject}
+    Email: ${email}
+    Message: ${massage}`,
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+    res.redirect("/thankyou");
+  });
+});
+
 
 // set template engine
 app.use(expressEjsLayout);
